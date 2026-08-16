@@ -30,10 +30,6 @@
   .lede { font-size: 1.05rem; }
   hr { border: 0; border-top: 1px solid #dddddd; margin: 44px 0; }
   .back { display: inline-block; margin-top: 48px; font-size: 0.9rem; }
-  table { border-collapse: collapse; width: 100%; margin: 0 0 16px; font-size: 0.95rem; }
-  th, td { border: 1px solid #cccccc; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #f5f5f5; font-weight: 600; }
-  .scroll { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -42,19 +38,19 @@
 <h1>Privacy Policy</h1>
 <p class="meta">Falah — Never Miss Salah<br>Last updated: 16 August 2026</p>
 
-<p class="lede">Falah is built so that almost nothing about you ever leaves your iPhone. Your prayers, your location, your answers and the apps you choose to lock are stored on your device and are not sent to us. We do not run a server that holds your data, and we do not sell anything about you to anyone.</p>
+<p class="lede">Almost everything Falah knows about you stays on your iPhone. Your prayer times, your prayer log, your setup answers and the apps you choose to lock never leave the device. The one part of the app that does reach a server is the Companion — the chat tab — because answering a question requires sending it somewhere. This policy sets out exactly where, and what is kept.</p>
 
-<p>This policy explains exactly what is stored, the few things that do leave your device, and who receives them. It covers the Falah iOS app and nothing else.</p>
+<p>It covers the Falah iOS app and nothing else.</p>
 
 <h2>The short version</h2>
 <ul>
-  <li>There is no Falah server holding your information. Signing in uses Apple's own system, and what it returns is kept on your device.</li>
+  <li>Prayer times, the prayer log, your setup answers and your lock settings are stored only on your device.</li>
   <li>Your location is used on your device to calculate prayer times. We never receive it.</li>
-  <li>Falah <strong>cannot see which apps you lock</strong>, and cannot see your app usage. Apple's design makes that technically impossible — see below.</li>
-  <li>Nothing you type into the Companion leaves your phone.</li>
-  <li>We do not use advertising, analytics SDKs, or cross-app tracking.</li>
-  <li>Two companies receive limited information: Apple, and our paywall provider Superwall. Both are described below.</li>
-  <li>Deleting the app deletes everything Falah has stored.</li>
+  <li>Falah <strong>cannot see which apps you lock</strong>, and cannot see your app usage. Apple's design makes that technically impossible.</li>
+  <li><strong>Companion questions do leave your phone.</strong> They go to our server and on to Google, which generates the reply. We do not store the questions or the answers.</li>
+  <li>The Companion is the only feature that needs an account. Everything else works signed out.</li>
+  <li>We do not use advertising, analytics SDKs, or cross-app tracking, and we do not sell your data.</li>
+  <li>Deleting the app erases everything held on the device. If you signed in, ask us to delete the account too — see section 9.</li>
 </ul>
 
 <hr>
@@ -71,27 +67,12 @@
   <li><strong>Your prayer log</strong> — which prayers you have confirmed, when you confirmed them, and whether each was early, on time, delayed, made up later, or missed.</li>
   <li><strong>Your Prayer Lock settings</strong> — which of the five prayers lock your apps, any scheduled locks you have created, and which individual lock windows you ended by hand.</li>
   <li><strong>Your notification preference</strong> and the date you first opened the app.</li>
-  <li><strong>Your Sign in with Apple details</strong>, if you sign in — see section 2.</li>
+  <li><strong>Your sign-in details and session</strong>, if you sign in — see section 3.</li>
 </ul>
 
-<p>Some of this — your prayer habits and your religious practice — is genuinely personal. That is precisely why it is kept on your device and not on ours.</p>
+<p>Some of this — your prayer habits and your religious practice — is genuinely personal. That is precisely why it stays on your device. <strong>None of the above is uploaded to us</strong>, including your prayer log and your setup answers.</p>
 
-<h2>2. Signing in with Apple</h2>
-
-<p>Falah offers <strong>Sign in with Apple</strong>. It is Apple's own sign-in system, and it is the only sign-in method the app supports — there is no password to create and no email and password form.</p>
-
-<p>When you sign in, Apple asks you whether to share your real email address or to hide it behind a private relay address that forwards to you. That choice is yours and it is made on Apple's screen, not ours. Apple then gives Falah:</p>
-
-<ul>
-  <li>a <strong>stable identifier</strong> for you, which is unique to Falah and cannot be used to recognise you in any other company's app;</li>
-  <li>your <strong>name and email address</strong> as you chose to share them — provided once, the first time you sign in.</li>
-</ul>
-
-<p>Falah stores this on your device, in the same local storage as everything else in section 1. There is no Falah server for it to be sent to, and we do not transmit it anywhere.</p>
-
-<p>You can stop sharing at any time in <strong>iOS Settings → your name → Sign in with Apple → Falah</strong>, which revokes the app's access from Apple's side. Deleting the app removes the stored credential from your device. Apple's own handling of the sign-in is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
-
-<h2>3. What Falah can never see: your locked apps</h2>
+<h2>2. What Falah can never see: your locked apps</h2>
 
 <p>This deserves its own section, because it is the most common question about an app like this.</p>
 
@@ -108,85 +89,119 @@
 
 <p>Where the app appears to show you the icons of the apps you picked, those icons are drawn by iOS inside its own process — Falah is given a sealed view to place on screen, not the identity of what is inside it. Your selection is stored on your device and in a private container shared only between Falah and its own iOS extensions. It is never transmitted.</p>
 
-<h2>4. What leaves your device</h2>
+<h2>3. Signing in with Apple</h2>
 
-<p>Three things, and no others.</p>
+<p>Falah offers <strong>Sign in with Apple</strong>, and it is the only sign-in method — there is no password and no sign-up form. <strong>You only need to sign in to use the Companion.</strong> Prayer times, notifications, Prayer Lock, the oath and your prayer log all work without an account, and nothing else in the app will ask you for one.</p>
+
+<p>When you sign in, Apple asks whether to share your real email address or hide it behind a private relay address that forwards to you. That choice is made on Apple's screen. Apple then gives Falah:</p>
+
+<ul>
+  <li>a <strong>stable identifier</strong> for you, unique to Falah and useless for recognising you in any other company's app;</li>
+  <li>your <strong>name and email address</strong> as you chose to share them — provided once, the first time you sign in.</li>
+</ul>
+
+<p>This is stored on your device, and it also creates an account on our backend, which is hosted by <strong>Supabase</strong>. That account is what lets the Companion know it is answering a real, signed-in user rather than an anonymous request. What Supabase holds is described in section 5.</p>
+
+<p>You can revoke Falah's access at any time in <strong>iOS Settings → your name → Sign in with Apple → Falah</strong>. Signing out inside Falah ends the session on your device. To delete the account itself, see section 9.</p>
+
+<h2>4. The Companion</h2>
+
+<p>The Companion is the chat tab dedicated to questions about Salah. It is the one part of Falah that sends what you write to a server, and it is worth being exact about what happens.</p>
+
+<p>When you send a Companion message:</p>
+
+<ul>
+  <li>Your question, and up to the <strong>eight most recent messages</strong> in that same conversation, are sent to our backend on <strong>Supabase</strong>.</li>
+  <li>Our backend checks that you are signed in, applies a rate limit, and then forwards your question and those recent messages to <strong>Google</strong>, which runs the AI model (Gemini) that writes the reply.</li>
+  <li>Google generates the answer, our backend streams it straight back to your phone, and the exchange ends.</li>
+</ul>
+
+<p><strong>We do not store your questions or the Companion's answers.</strong> They are not written to any database of ours. They pass through our backend in order to reach Google and return to you, and they exist afterwards only in the conversation on your own screen, which is cleared when you close the app.</p>
+
+<p>What our backend does keep is described in section 5 — in short, a count and the times of your recent messages, so the rate limit works. Not their content.</p>
+
+<p>Google processes what is sent to it in order to generate the reply, under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and the terms governing its AI services. We do not control Google's own retention of that data. <strong>Please do not type anything into the Companion that you would not want processed by a third party</strong> — including personal details, health information, or anything identifying about you or anyone else. The Companion never needs them to help you with Salah.</p>
+
+<h2>5. What our backend stores</h2>
+
+<p>Our backend runs on <a href="https://supabase.com">Supabase</a>. If you have never signed in, it holds nothing about you at all. If you have, it holds only this:</p>
+
+<ul>
+  <li><strong>Your account</strong> — the identifier Apple issued, and the email address you chose to share, which may be Apple's private relay address. This comes from Sign in with Apple; we never ask you for it directly.</li>
+  <li><strong>A profile row</strong> containing your account identifier and the date it was created. Nothing else.</li>
+  <li><strong>Companion usage</strong> — how many messages you have sent in the past hour and the times you sent them, plus your subscription tier. This exists to enforce a limit of 20 Companion messages per hour, which is what stops the service being abused and the costs running away.</li>
+</ul>
+
+<p>That is the complete list. Your prayer log, your setup answers, your location, your lock settings and your Companion conversations are <strong>not</strong> on our server.</p>
+
+<h2>6. Other services</h2>
 
 <h3>Apple — turning coordinates into a place name</h3>
-<p>When Falah works out which city you are in rather than the next one over, it asks iOS to convert your coordinates into a place name. That request is handled by Apple and may be sent to Apple's servers. Falah receives only the resulting name and country code. This is a convenience for the Settings screen; if it fails, your prayer times are unaffected. Apple's handling of that request is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
-<p>The prayer time calculation itself happens entirely on your device using standard astronomical formulas. There is no prayer-time server and no city database — Falah works with no internet connection at all.</p>
+<p>When Falah works out which city you are in rather than the next one over, it asks iOS to convert your coordinates into a place name. That request is handled by Apple and may be sent to Apple's servers. Falah receives only the resulting name and country code. This is a convenience for the Settings screen; if it fails, your prayer times are unaffected. Apple's handling of it is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+<p>The prayer time calculation itself happens entirely on your device using standard astronomical formulas. There is no prayer-time server and no city database — that part of Falah works with no internet connection at all.</p>
 
 <h3>Apple — subscriptions</h3>
 <p>If you purchase a Falah subscription, the transaction is handled entirely by Apple through the App Store. We never see your name, your card, or your billing address. We receive only Apple's confirmation of whether a valid subscription exists.</p>
 
-<h3>Superwall — paywall and subscription infrastructure</h3>
-<p>Falah uses <a href="https://superwall.com">Superwall</a> to display its subscription screen and to keep track of subscription status. The Superwall SDK is part of the app and communicates with Superwall's servers.</p>
-<p>Superwall receives technical and commercial information, which as declared in their App Store privacy manifest includes <strong>purchase history</strong>, together with standard device and app information such as your device model, operating system version, app version, locale, and an anonymous identifier generated for your installation. It also records paywall events — that a subscription screen was shown, dismissed, or converted.</p>
-<p>Superwall does not receive your name, your location, your prayer log, your setup answers, or anything about which apps you lock. Superwall's manifest declares that this data is <strong>not linked to your identity and is not used for tracking</strong>. Their handling of it is governed by the <a href="https://superwall.com/privacy">Superwall Privacy Policy</a>.</p>
+<h3>Superwall — paywall infrastructure</h3>
+<p>Falah uses <a href="https://superwall.com">Superwall</a> to display its subscription screen and to track subscription status. Superwall receives technical and commercial information — as declared in their App Store privacy manifest, <strong>purchase history</strong>, together with standard device and app information such as your device model, operating system version, app version, locale, and an anonymous identifier generated for your installation. It also records that a subscription screen was shown, dismissed, or converted.</p>
+<p>Superwall does not receive your name, your location, your prayer log, your Companion messages, or anything about which apps you lock. Their manifest declares that this data is <strong>not linked to your identity and is not used for tracking</strong>. See the <a href="https://superwall.com/privacy">Superwall Privacy Policy</a>.</p>
 
-<h2>5. What Falah does not do</h2>
+<h2>7. What Falah does not do</h2>
 
 <ul>
-  <li><strong>No passwords, and no sign-up form.</strong> The only way to sign in is Apple's own, and it is handled on Apple's screen. We never see or store a password.</li>
+  <li><strong>No passwords, and no sign-up form.</strong> The only way to sign in is Apple's own, handled on Apple's screen. We never see or store a password.</li>
   <li><strong>No advertising.</strong> Falah contains no ads and no advertising SDKs.</li>
   <li><strong>No tracking.</strong> Falah does not track you across other companies' apps or websites, and does not request App Tracking Transparency permission because it has nothing to ask for.</li>
-  <li><strong>No analytics SDK.</strong> There is no Google Analytics, Firebase, Facebook SDK, Amplitude, Mixpanel, or similar in the app.</li>
-  <li><strong>No selling or sharing.</strong> We do not sell, rent, or share personal information with third parties for their own marketing purposes. We never have and we do not intend to.</li>
+  <li><strong>No analytics SDK.</strong> There is no Google Analytics, Firebase Analytics, Facebook SDK, Amplitude, Mixpanel, or similar in the app.</li>
+  <li><strong>No selling or sharing.</strong> We do not sell, rent, or share personal information with third parties for their own marketing purposes.</li>
   <li><strong>No push server.</strong> Every notification Falah sends — the adhan alert and the closing-window warning — is scheduled by your own iPhone. The app is not provisioned to receive remote push notifications at all.</li>
+  <li><strong>No uploading of your worship.</strong> Your prayer log stays on your device. We do not know whether you prayed.</li>
 </ul>
 
-<h2>6. The Companion</h2>
-
-<p>The Companion is the chat tab dedicated to questions about Salah. In the current version of Falah, its answers are written into the app itself and selected on your device. <strong>Nothing you type into the Companion is transmitted anywhere</strong>, it is not stored between launches, and no one — including us — can read it.</p>
-
-<p>If a future version of Falah introduces a Companion that sends your questions to a server in order to answer them, that will be a material change, and this policy will be updated and the change made clear in the app before it takes effect.</p>
-
-<h2>7. Location permission</h2>
+<h2>8. Location permission</h2>
 
 <p>Falah asks for location access <em>while using the app</em> only. It never requests background or "always" location access. You may decline, and you may revoke access at any time in <strong>iOS Settings → Privacy &amp; Security → Location Services → Falah</strong>. Falah checks your location when it needs to establish or refresh your place; it does not follow you around.</p>
 
 <p>Location accuracy is deliberately requested at a low, coarse level. Prayer times do not change meaningfully across a city, so Falah does not need to know precisely where in it you are.</p>
 
-<h2>8. How long data is kept, and how to delete it</h2>
+<h2>9. How long data is kept, and how to delete it</h2>
 
-<p>Everything described in section 1 stays on your device until you remove it. There is no retention period because there is no server retaining anything.</p>
+<h3>On your device</h3>
+<p>Everything in section 1 stays on your device until you remove it. <strong>Deleting the app</strong> removes Falah's entire storage container — your prayer log, your setup answers, your location, your lock settings and your saved session. This is complete and irreversible. You can also revoke Screen Time access, and revoke Sign in with Apple, in iOS Settings.</p>
 
-<p>To delete it:</p>
-<ul>
-  <li><strong>Delete the app.</strong> iOS removes Falah's entire storage container with it, including your prayer log, your setup answers, your location and your lock settings. This is complete and irreversible.</li>
-  <li><strong>Revoke Screen Time access</strong> in iOS Settings to end Falah's ability to restrict apps.</li>
-  <li><strong>Revoke Sign in with Apple</strong> in iOS Settings → your name → Sign in with Apple → Falah, if you signed in.</li>
-</ul>
+<h3>On our backend</h3>
+<p>If you signed in, your account and the rate-limit rows described in section 5 remain on Supabase until the account is deleted. <strong>Deleting the app does not delete the account</strong>, because the account lives on the server rather than the phone.</p>
+<p>To have it deleted, email us at the address in section 13 from — or naming — the address you signed in with. We will delete the account and everything attached to it, and confirm when it is done. Rate-limit timestamps older than one hour serve no purpose and are not retained as history.</p>
+<p>We do not store your Companion conversations, so there is nothing of them to delete.</p>
 
-<p>Data held by Apple or Superwall is subject to their own policies and retention periods; requests concerning it should be directed to them, though we will help where we can — write to us at the address below.</p>
-
-<h2>9. Your rights</h2>
+<h2>10. Your rights</h2>
 
 <p>Depending on where you live, you may have rights under laws such as the GDPR (Europe and the UK), PIPEDA (Canada), or the CCPA/CPRA (California) to access, correct, delete, or port your personal information, and to object to its processing.</p>
 
-<p>Because Falah holds your information on your own device and not on our servers, you already exercise most of these rights directly and without asking us: the data is in your possession, you can see it in the app, and you can erase all of it by deleting the app. We hold no copy to hand over, correct, or delete on your behalf.</p>
+<p>Most of what Falah knows is on your own device, so you already exercise those rights directly: you can see it in the app and erase all of it by deleting the app. For the limited account information we hold on Supabase, described in section 5, write to us at the address below and we will respond as the applicable law requires. We do not discriminate against anyone for exercising these rights, and we do not sell personal information as those laws define the term.</p>
 
-<p>Where we do act as a controller of information — principally the limited subscription information handled through Superwall and Apple — you may contact us at the address below and we will respond as the applicable law requires. We do not discriminate against anyone for exercising these rights. We do not sell personal information as those laws define the term.</p>
+<p>For users in the European Economic Area and the UK, our lawful basis is: your <strong>consent</strong> for location and for signing in, which you may withdraw at any time in iOS Settings; <strong>performance of a contract</strong> for operating the Companion and your subscription once you ask for them; and our <strong>legitimate interest</strong> in rate limiting, which keeps the service available and affordable for everyone. Data sent to Google and Supabase may be processed outside your country, including in the United States, under the transfer safeguards those providers maintain.</p>
 
-<p>For users in the European Economic Area and the UK, our lawful basis for processing the limited data described in section 3 is our legitimate interest in operating and supporting the app and in processing subscriptions, and where required, your consent — which you give by granting the relevant iOS permission and may withdraw at any time in iOS Settings.</p>
+<h2>11. Children</h2>
 
-<h2>10. Children</h2>
+<p>Falah is not directed at children under 13, and we do not knowingly collect personal information from them. The app has no public profiles, no messaging between users, and no user-generated content that could be shared with anyone else. If you believe a child has provided us with personal information, contact us and we will act on it.</p>
 
-<p>Falah is not directed at children under 13, and we do not knowingly collect personal information from them. The app has no account system, no chat with other people, and no user-generated content that could be shared. If you believe a child has provided us with personal information, contact us and we will act on it.</p>
+<h2>12. Security</h2>
 
-<h2>11. Security</h2>
+<p>Your on-device data is protected by iOS: it sits in the app's private container, which other apps cannot read, and is covered by your device passcode and iOS file encryption.</p>
 
-<p>Your Falah data is protected by iOS itself. It is stored inside the app's private container, which other apps on your iPhone cannot read, and it is protected by your device passcode and by iOS file encryption. If you back up your iPhone, that backup is protected by Apple according to your iCloud or local backup settings.</p>
+<p>Traffic between the app, our backend and Google is encrypted in transit. Our backend requires a valid Apple-issued session for every Companion request, and the database is configured so that a signed-in user can read only their own rows and cannot write to the rate-limit table at all. The key used to reach Google is held only on the server and is never present in the app.</p>
 
-<p>No system is perfectly secure, but keeping data on your device rather than on a server we operate removes an entire category of risk: there is no Falah database to breach.</p>
+<p>No system is perfectly secure, and we do not claim otherwise. Keeping your prayer log, your answers and your locked apps off our server is a deliberate limit on how much a breach of it could ever expose.</p>
 
-<h2>12. Changes to this policy</h2>
+<h2>13. Changes to this policy</h2>
 
-<p>If this policy changes, the "Last updated" date at the top will change with it. If a change is material — particularly anything that would cause information to leave your device that previously did not — we will make that clear within the app rather than relying on you to re-read this page.</p>
+<p>If this policy changes, the "Last updated" date at the top changes with it. If a change is material — particularly anything that causes information to leave your device that previously did not — we will make that clear within the app rather than relying on you to re-read this page.</p>
 
-<h2>13. Contact</h2>
+<h2>14. Contact</h2>
 
-<p>Questions about this policy, or about anything described in it:</p>
+<p>Questions about this policy, requests to delete your account, or anything else described here:</p>
 <p><a href="mailto:awalehussein2004@gmail.com">awalehussein2004@gmail.com</a></p>
 
 <hr>
