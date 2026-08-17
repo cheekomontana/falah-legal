@@ -24,33 +24,42 @@ When changing either document, update the "Last updated" date at the top of it.
 
 ## Keeping the policy true
 
-The Privacy Policy makes specific factual claims about the app. If any of the
-following changes, the policy is wrong and must be updated **before** the
-release ships:
+Both documents make specific factual claims about the app. If any of the
+following changes, they are wrong and must be updated **before** the release
+ships:
 
-- **The Companion backend starts storing questions or answers.** Section 4 says
-  plainly that it does not — the Edge Function streams them through to Google
-  and keeps nothing. Adding logging, a transcript table, or an analytics hook
-  over that traffic makes the published policy false.
+- **The prayer log, setup answers or location begin syncing to the server.**
+  Sections 1 and 7 both say they never do, and it is the strongest promise in
+  the document. Everything else here is a detail by comparison.
+- **PostHog stops being anonymous.** Section 6 says three things: it is never
+  told who you are, it is never given a location, and it never receives your
+  worship or your content. Calling `posthog.identify()`, removing
+  `disableGeoip` from the options in `App.tsx`, or capturing a prayer event
+  would each falsify one of them. The `disableGeoip` coupling is the easiest to
+  break by accident, because the PostHog default is to geolocate.
+- The Companion conversations stop being deleted with the account, or the
+  row-level security on those tables is loosened (section 4 promises both).
 - The set of tables on Supabase changes, or they start holding anything beyond
-  the account, the profile row and the rate-limit counters (section 5 lists
-  them exactly).
-- The prayer log, setup answers or location begin syncing to the server
-  (sections 1 and 7 both say they do not).
+  the account, the profile row, the rate-limit counters and the conversations
+  (section 5 lists them exactly).
 - The AI provider changes from Google, or a second provider is added
   (section 4 names Google, and the Terms name Gemini).
 - The rate limit changes from 20 messages per hour (section 5 and Terms §4).
-- An analytics or advertising SDK is added (section 7 says there is none).
+- An advertising SDK, or a second analytics tool, is added (section 7 names
+  PostHog as the only one).
 - The set of data stored on device changes (section 1 lists it).
 - The Sign in with Apple implementation changes what it requests (section 3).
 - Anything other than the Companion starts requiring an account (sections 3 and
   4 both say it is the only feature that does).
-- A third party beyond Apple, Superwall, Supabase and Google begins receiving
-  data.
+- In-app account deletion moves or is removed (section 9 tells the user exactly
+  where the button is).
+- **The Companion is re-narrowed to Salah only**, or given a fixed whitelist of
+  sources again. Terms §4 says he answers across the deen and is instructed to
+  name his sources.
+- A third party beyond Apple, Superwall, Supabase, Google and PostHog begins
+  receiving data.
 
-## Known gap
-
-The app supports account creation but has **no in-app account deletion**, which
-App Store Guideline 5.1.1(v) requires. Section 9 of the policy currently directs
-users to email for deletion; that is the honest description of what exists, not
-a substitute for the in-app control Apple asks for.
+There is a fourth place this list has to agree with: `ios.privacyManifests` in
+the Falah repo's `app.json`, which is Apple's machine-readable version of it,
+and the nutrition label in App Store Connect, which is a fifth. Changing what
+Falah collects means changing all of them.
